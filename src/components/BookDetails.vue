@@ -98,12 +98,13 @@ export default defineComponent({
   max-width: 125px;
   flex-shrink: 0;
   text-align: center;
+  cursor: pointer;
 }
 
 .book-cover {
-  width: 125px;
-  height: 175px;
-  object-fit: cover;
+  width: 100px;
+  height: 150px;
+  aspect-ratio: auto 100 / 150;
   object-position: center;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -124,4 +125,3 @@ export default defineComponent({
   color: red;
 }
 </style>
-@/stores/book-data/store@/stores/book-data/types

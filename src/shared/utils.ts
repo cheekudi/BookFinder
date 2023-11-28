@@ -3,4 +3,9 @@ function showError(message: string) {
   alert(message);
 }
 
-export { showError };
+// Replace http with https
+function secureUrl(url: string) {
+  return url.replace(/^http:/, "https:");
+}
+
+export { showError, secureUrl };

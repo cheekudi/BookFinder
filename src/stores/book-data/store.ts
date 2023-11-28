@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import type { Book, BookResponse } from "./types";
 import { searchBooks } from "./apiCalls";
+import { secureUrl } from "@/shared/utils";
 
 export const useBookStore = defineStore("books", {
   state: () => ({
@@ -22,7 +23,7 @@ export const useBookStore = defineStore("books", {
           author: item.volumeInfo?.authors
             ? item.volumeInfo?.authors.join(", ")
             : "",
-          cover: item.volumeInfo?.imageLinks?.thumbnail ?? "",
+          cover: secureUrl(item.volumeInfo?.imageLinks?.thumbnail) ?? "",
           description:
             item.volumeInfo?.description ?? item.searchInfo?.textSnippet ?? "",
           publishedDate: item.volumeInfo?.publishedDate ?? "",

@@ -1,6 +1,8 @@
 <template>
   <div class="search-bar">
     <input
+      id="search-input"
+      name="search-input"
       type="text"
       placeholder="Search for books..."
       class="search-input form-control"
